@@ -3,31 +3,22 @@
 
 #include "Person.h"
 using namespace std;
-class Person {
+class Instructor : public Person {
 private:
-    string name;
-    int id;
+    string department;
+    int experienceYears;
 
 public:
-    Person(string name, int id) {
-        this->name = name;
-        this->id = id;
+    Instructor(string name, int id, string department, int experienceYears) : Person(name,id) {
+        this->department = department;
+        this->experienceYears = experienceYears;
     }
-    Person() {
-        name = "none";
-        id = 0;
-    }
-    ~Person() {
+    Instructor() {
 
     }
+    ~Instructor() {
 
-    string getName() {
-        return name;
     }
-    int getId() {
-        return id;
-    }
-
     void display();
 };
 
